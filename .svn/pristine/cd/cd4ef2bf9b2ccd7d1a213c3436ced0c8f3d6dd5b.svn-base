@@ -1,0 +1,113 @@
+(function() {
+    'use strict';
+
+    angular
+        .module('efs.map')
+        .constant('ICON_VENDOR', 'awesomeMarker')
+        .factory('mapService', mapService);
+
+    mapService.$inject = ['arc', 'ICON_VENDOR', 'LOCATION_TYPES'];
+
+    /* @ngInject */
+    function mapService(arc, ICON_VENDOR, LOCATION_TYPES) {
+        var markers = {};
+        var routes = {};
+
+/*        addMarker({
+	        "locationId": 651,
+	        "createUserId": "nab04",
+	        "createTimeStamp": 1426096439649,
+	        "lastUpdatedUserId": "nab04",
+	        "lastUpdatedTimestamp": 1426096439649,
+	        "addressLine1": "8103 FALLBROOK DRIVE",
+	        "addressLine2": null,
+	        "addressLine3": null,
+	        "addressLine4": null,
+	        "addressLine5": null,
+	        "cityName": "HOUSTON",
+	        "stateCode": "TX",
+	        "postalCode": "77064",
+	        "countryCode": "US",
+	        "latitude": "29.9235",
+	        "longitude": "-95.5278",
+	        "locationTypCd": 13,
+	        "locationName": "HOUSTON",
+	        "activeFlg": "Y",
+	        "locNbr": "5520",
+	        "errorString": null,
+	        "rowNumber": 0,
+	        "error": null,
+	        "sourceSystemCd": 13,
+	        "countryName": null
+	    });*/
+
+        return {
+            addMarker: addMarker,
+            getMarkers: getMarkers,
+            addRoute: addRoute,
+            getRoutes: getRoutes
+        };
+
+        function addMarker(location, isAlreadyMarker) {
+        	if (isAlreadyMarker) {
+        		_.extend(markers, markers, location);
+        	} else {
+        		buildMarker(location);
+        	}
+        }
+
+        function addRoute(from, to) {
+        	var generator = new arc.GreatCircle({x: to.lng, y: to.lat}, {x: from.lng, y: from.lat}, {'name': 'Seattle to DC'});
+            var line = generator.Arc(100,{offset:10});
+            var geojson_feature = line.json();
+            
+            var newRoutes = {
+            	data: [geojson_feature],
+            	style: function style() {
+	                return {
+	                    fillColor: "#00ae40",
+	                    weight: 3,
+	                    opacity: 1,
+	                    color: '#00ae40',
+	                    fillOpacity: 0.7
+	                };
+	            }
+            };
+
+            _.extend(routes, routes, newRoutes);
+        }
+
+        function buildMarker(location) {
+        	var marker = {};
+
+        	marker[location.locationName] = {
+        		lat: parseFloat(location.latitude, 10),
+        		lng: parseFloat(location.longitude, 10),
+        		compileMessage: false,
+        		message: location.locationName,
+        		icon: buildIcon(location)
+        	};
+
+        	_.extend(markers, markers, marker);
+        }
+
+        function buildIcon(location) {
+        	var locationType = LOCATION_TYPES[location.locationTypCd];
+        	var icon = {
+        		type: ICON_VENDOR,
+                icon: locationType.icon.shape,
+                iconColor: locationType.icon.color
+        	};
+
+        	return icon;
+        }
+
+        function getMarkers() {
+        	return markers;
+        }
+
+        function getRoutes() {
+        	return routes;
+        }
+    }
+})();

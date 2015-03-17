@@ -1,0 +1,19 @@
+(function() {
+    'use strict';
+
+    angular
+        .module('efs.search')
+        .controller('searchCtrl', searchCtrl);
+
+    /* @ngInject */
+    function searchCtrl() {
+        /*jshint validthis: true */
+        var vmSearch = this;
+
+        activate();
+
+        function activate() {
+        	vmSearch.searchQuery = '';
+        }
+    }
+})();

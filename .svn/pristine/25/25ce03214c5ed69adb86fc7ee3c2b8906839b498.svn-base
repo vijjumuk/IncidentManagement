@@ -1,0 +1,8 @@
+<div class="search-container" ng-controller="searchCtrl as vmSearch">
+	<form name="frmSearch" id="frmSearch">
+		<div class="input-group">
+			<input type="text" class="form-control" id="txtMainSearch" ng-model="vmSearch.searchQuery"  placeholder="Search" />
+			<div class="input-group-addon"><i class="fa fa-search"></i></div>
+		</div>
+	</form>
+</div>

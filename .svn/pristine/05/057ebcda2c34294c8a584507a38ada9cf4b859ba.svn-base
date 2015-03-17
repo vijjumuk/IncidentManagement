@@ -1,0 +1,26 @@
+// dataservice factory
+angular
+    .module('efs.core')
+    .factory('dataservice', dataservice);
+
+dataservice.$inject = ['$http'];
+
+function dataservice($http) {
+    return {
+        getLocations: getLocations
+    };
+
+    function getLocations() {
+        return $http.get('/api/location')
+            .then(complete)
+            .catch(failed);
+
+        function complete(response) {
+            return response.data.results;
+        }
+
+        function failed(error) {
+            //logger.error('XHR Failed for getLocations.' + error.data);
+        }
+    }
+}

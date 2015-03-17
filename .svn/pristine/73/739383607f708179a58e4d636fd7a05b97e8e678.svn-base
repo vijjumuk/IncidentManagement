@@ -1,0 +1,113 @@
+(function() {
+    'use strict';
+
+    angular
+        .module('efs.map')
+        .constant('BING_API_KEY', "AuyVXlj60uQ57VAG_RvyJlMFRh-IQxQmUc6IVVXo6LYCaHn-rfbdk4-tw-hv1mgi")
+        .constant('mapDefaultPosition', {lat: 39.8282, lng:  -98.5795, zoom: 4})
+        .constant('MAP_HEIGHT', "500px")
+        .controller('mapCtrl', mapCtrl);
+
+    mapCtrl.$inject = ['$timeout', 'BING_API_KEY', 'mapDefaultPosition', 'MAP_HEIGHT', 'L', 'arc'];
+
+    /* @ngInject */
+    function mapCtrl($timeout, BING_API_KEY, mapDefaultPosition, MAP_HEIGHT, L, arc) {
+        /*jshint validthis: true */
+        var vmMap = this;
+
+        activate();
+
+        function activate() {
+			initializeMap();
+        }
+
+        function initializeMap () {
+        	L.AwesomeMarkers.Icon.prototype.options.prefix = 'fa';
+        	angular.extend(vmMap, {
+                height: MAP_HEIGHT,
+                center: mapDefaultPosition,
+                markers: {
+                    houston: {
+                        lat: 47.6097,
+                        lng: -122,
+                        compileMessage: false,
+                        message: "Houston RDC",
+                        icon: {
+		                    type: 'awesomeMarker',
+		                    icon: 'circle',
+		                    markerColor: 'orange',
+		                    iconColor: '#f96302'
+		                }
+                    }
+                },
+                paths: {},
+                layers: {
+                    baselayers: {
+                    	bingRoad: {
+                            name: 'Bing Road',
+                            type: 'bing',
+                            key: BING_API_KEY,
+                            layerOptions: {
+                                type: 'Road'
+                            }
+                        },
+                        bingAerial: {
+                            name: 'Bing Aerial',
+                            type: 'bing',
+                            key: BING_API_KEY,
+                            layerOptions: {
+                                type: 'Aerial'
+                            }
+                        },
+                        bingAerialWithLabels: {
+                            name: 'Bing Aerial With Labels',
+                            type: 'bing',
+                            key: BING_API_KEY,
+                            layerOptions: {
+                                type: 'AerialWithLabels'
+                            }
+                        },
+                    }
+                }
+            });
+        }
+
+        function addMarker () {
+        	vmMap.markers.Atlanta = {
+                lat: 33.7550,
+                lng: -84.3900,
+                message: "Atlanta",
+                icon: {
+                    type: 'awesomeMarker',
+                    icon: 'circle',
+                    markerColor: 'green',
+                    iconColor: '#00ae40'
+                }
+            };
+        }
+
+        function addRoute () {
+        	var generator = new arc.GreatCircle({x: vmMap.markers.houston.lng, y: vmMap.markers.houston.lat}, {x: vmMap.markers.Atlanta.lng, y: vmMap.markers.Atlanta.lat}, {'name': 'Seattle to DC'});
+
+            var line = generator.Arc(100,{offset:10});
+            var geojson_feature = line.json();
+            vmMap.paths = {
+            	data: [geojson_feature],
+            	style: function style() {
+	                return {
+	                    fillColor: "#00ae40",
+	                    weight: 3,
+	                    opacity: 1,
+	                    color: '#00ae40',
+	                    fillOpacity: 0.7
+	                };
+	            }
+            } ;
+        }
+
+        $timeout(function () {
+        	addMarker();
+        	addRoute();
+        }, 1000);
+    }
+})();

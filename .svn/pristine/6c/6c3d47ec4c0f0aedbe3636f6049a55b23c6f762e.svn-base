@@ -1,0 +1,344 @@
+package com.homedepot.di.xd.efs.to;
+
+import java.io.Serializable;
+import java.sql.Timestamp;
+import java.util.List;
+
+/**
+ */
+public class VendorGroupParamTO implements Serializable{
+
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3189209001754425850L;
+	
+	private String vendorNumber;
+
+	private String origin;
+
+	private String destination;
+
+	private String createUserId;
+
+	private Timestamp createdTimeStamp;
+
+	private String lastUpdatedUserId;
+
+	private Timestamp lastUpdatedTimestamp;
+
+	private List<ParameterTO> paramCdLiat;
+
+	private int vendorGroupId;
+
+	private String laneLoadGroupId;
+
+	private int originId;
+
+	private int destinationId;
+
+	private int rowNumber;
+
+	private String defaultFlag;
+
+	private String effectiveBeginDate;
+
+	private String effectiveEndDate;
+
+
+	/**
+	 * Method setVendorNumber.
+	 * @param vendorNumber String
+	 */
+	public void setVendorNumber(String vendorNumber) {
+		
+		this.vendorNumber = vendorNumber;
+	}
+
+	/**
+	 * Method getVendorNumber.
+	 * @return String
+	 */
+	public String getVendorNumber() {
+		
+		return vendorNumber;
+	}
+
+	/**
+	 * Method setOrigin.
+	 * @param origin String
+	 */
+	public void setOrigin(String origin) {
+		
+		this.origin = origin;
+		
+	}
+
+	/**
+	 * Method getOrigin.
+	 * @return String
+	 */
+	public String getOrigin() {
+		
+		return origin;
+	}
+
+	/**
+	 * Method setDestination.
+	 * @param dest String
+	 */
+	public void setDestination(String dest) {
+	
+		this.destination = dest;
+		
+	}
+
+	/**
+	 * Method getDestination.
+	 * @return String
+	 */
+	public String getDestination() {
+		
+		return destination;
+	}
+
+	/**
+	 * Method setCreateUserId.
+	 * @param userId String
+	 */
+	public void setCreateUserId(String userId) {
+		
+		this.createUserId = userId;
+	}
+
+	/**
+	 * Method getCreateUserId.
+	 * @return String
+	 */
+	public String getCreateUserId() {
+		
+		return createUserId;
+	}
+	
+/**
+ * Method setCreateTimeStamp.
+ * @param createdTimeStamp Timestamp
+ */
+public void setCreateTimeStamp(Timestamp createdTimeStamp) {
+		
+		this.createdTimeStamp = createdTimeStamp;
+		
+	}
+
+	/**
+	 * Method getCreateTimestamp.
+	 * @return Timestamp
+	 */
+	public Timestamp getCreateTimestamp() {
+		
+		return createdTimeStamp;
+	}
+
+	/**
+	 * Method setLastUpdatedUserId.
+	 * @param userId String
+	 */
+	public void setLastUpdatedUserId(String userId) {
+		
+		this.lastUpdatedUserId = userId;
+		
+	}
+
+	/**
+	 * Method getLastUpdatedUserId.
+	 * @return String
+	 */
+	public String getLastUpdatedUserId() {
+		
+		return lastUpdatedUserId;
+	}
+
+	/**
+	 * Method setLastUpdatedTimestamp.
+	 * @param lastUpdatedTimeStamp Timestamp
+	 */
+	public void setLastUpdatedTimestamp(Timestamp lastUpdatedTimeStamp) {
+		
+		this.lastUpdatedTimestamp = lastUpdatedTimeStamp;
+		
+	}
+	
+	/**
+	 * Method getLastUpdatedTimestamp.
+	 * @return Timestamp
+	 */
+	public Timestamp getLastUpdatedTimestamp() {
+
+		return lastUpdatedTimestamp;
+	}
+
+	/**
+	 * Method setLoadParamList.
+	 * @param paramCdLiat List<ParameterTO>
+	 */
+	public void setLoadParamList(List<ParameterTO> paramCdLiat) {
+		
+		this.paramCdLiat = paramCdLiat;
+	}
+
+	/**
+	 * Method getLoadParamList.
+	 * @return List<ParameterTO>
+	 */
+	public List<ParameterTO> getLoadParamList() {
+		
+		return paramCdLiat;
+	}
+
+	/**
+	 * Method setVendorGroupId.
+	 * @param vendorGroupId int
+	 */
+	public void setVendorGroupId(int vendorGroupId) {
+		
+		this.vendorGroupId = vendorGroupId;
+		
+	}
+
+	/**
+	 * Method getVendorGroupId.
+	 * @return int
+	 */
+	public int getVendorGroupId() {
+		
+		return vendorGroupId;
+	}
+
+	/**
+	 * Method setLaneLoadGroupId.
+	 * @param lanGroupid String
+	 */
+	public void setLaneLoadGroupId(String lanGroupid) {
+		
+		this.laneLoadGroupId = lanGroupid;
+		
+	}
+
+	/**
+	 * Method getLaneLoadGroupId.
+	 * @return String
+	 */
+	public String getLaneLoadGroupId() {
+		
+		return laneLoadGroupId;
+	}
+
+	/**
+	 * Method setOriginId.
+	 * @param originId int
+	 */
+	public void setOriginId(int originId) {
+		
+		this.originId = originId;
+	}
+
+	/**
+	 * Method getOriginId.
+	 * @return int
+	 */
+	public int getOriginId() {
+		
+		return originId;
+	}
+
+	/**
+	 * Method setDestinationId.
+	 * @param destinationId int
+	 */
+	public void setDestinationId(int destinationId) {
+		
+		this.destinationId = destinationId;
+	}
+
+	/**
+	 * Method getDestinationId.
+	 * @return int
+	 */
+	public int getDestinationId() {
+		
+		return destinationId;
+	}
+
+	/**
+	 * Method setRowNumber.
+	 * @param rowNumber int
+	 */
+	public void setRowNumber(int rowNumber) {
+		
+		this.rowNumber = rowNumber;
+	}
+
+	/**
+	 * Method getRowNumber.
+	 * @return int
+	 */
+	public int getRowNumber() {
+		return rowNumber;
+	}
+
+	/**
+	 * Method setDefaultFlag.
+	 * @param flag String
+	 */
+	public void setDefaultFlag(String flag) {
+		
+		this.defaultFlag = flag;
+		
+	}
+
+	/**
+	 * Method getDefaultFlag.
+	 * @return String
+	 */
+	public String getDefaultFlag() {
+		
+		return defaultFlag;
+	}
+
+	/**
+	 * Method setEffectiveBeginDate.
+	 * @param beginDate String
+	 */
+	public void setEffectiveBeginDate(String beginDate) {
+
+		this.effectiveBeginDate = beginDate;
+		
+	}
+
+	/**
+	 * Method getEffectiveBeginDate.
+	 * @return String
+	 */
+	public String getEffectiveBeginDate() {
+		
+		return effectiveBeginDate;
+	}
+
+	/**
+	 * Method setEffectiveEndDate.
+	 * @param endDate String
+	 */
+	public void setEffectiveEndDate(String endDate) {
+		
+		this.effectiveEndDate = endDate;
+	}
+	
+	/**
+	 * Method getEffectiveEndDate.
+	 * @return String
+	 */
+	public String getEffectiveEndDate() {
+
+		return effectiveEndDate;
+	}
+}

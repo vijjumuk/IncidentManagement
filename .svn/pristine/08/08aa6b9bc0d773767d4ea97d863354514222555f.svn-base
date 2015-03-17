@@ -1,0 +1,32 @@
+package com.homedepot.di.xd.efs.businesshelper;
+
+import java.util.List;
+
+import com.homedepot.di.xd.efs.dao.LocationUploadDAO;
+import com.homedepot.di.xd.efs.exception.DataOperationException;
+import com.homedepot.di.xd.efs.exception.EFSException;
+import com.homedepot.di.xd.efs.to.LocationTO;
+
+public class LocationProcessor {
+
+	private LocationProcessor(){
+	}
+	
+	/**
+	 * This method will retrieve all locations from the location table based on the queryString and locationTypeCode (optional) passed in.  
+	 * If a code is not passed in, then the code will pull in all location based on the queryString alone.  The queryString will be 
+	 * compared against the location name or location number, or the supply chain location id.
+	 * 
+	 * @param query - query string to search for.
+	 * @param locationTypeCode - location type code
+	 * @return - list of LocationTO objects
+	 * @throws EFSException
+	 */
+	public static List<LocationTO> getLocationsByWildcard(String query, Short locationTypeCode) throws EFSException{
+		try {
+			return LocationUploadDAO.getLocationsByWildcard(query, locationTypeCode);
+		} catch (DataOperationException e) {
+			throw new EFSException(e.getMessage(),e);
+		}
+	}
+}

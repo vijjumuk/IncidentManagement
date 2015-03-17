@@ -1,0 +1,19 @@
+(function() {
+    'use strict';
+
+    angular
+        .module('efs.rdc')
+        .controller('rdcCtrl', rdcCtrl);
+
+    /* @ngInject */
+    function rdcCtrl() {
+        /*jshint validthis: true */
+        var vmRDC = this;
+
+        activate();
+
+        function activate() {
+
+        }
+    }
+})();

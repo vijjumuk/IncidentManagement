@@ -1,0 +1,855 @@
+package com.homedepot.di.xd.efs.to;
+
+import java.io.Serializable;
+import java.sql.Timestamp;
+
+import javax.xml.bind.annotation.XmlAccessType;
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
+
+/**
+ * The class is used for Location details.
+ */
+@XmlRootElement(name = "reportType")
+@XmlAccessorType(XmlAccessType.FIELD)
+public class LocationTO implements Serializable {
+
+	/**
+	 * Field serialVersionUID. (value is 52388672889678699)
+	 */
+	private static final long serialVersionUID = 52388672889678699L;
+
+	/**
+	 * Field locationId.
+	 */
+	private int locationId;
+	/**
+	 * Field createUserId.
+	 */
+	private String createUserId;
+	/**
+	 * Field createTimeStamp.
+	 */
+	private Timestamp createTimeStamp;
+	/**
+	 * Field lastUpdatedUserId.
+	 */
+	private String lastUpdatedUserId;
+	/**
+	 * Field lastUpdatedTimestamp.
+	 */
+	private Timestamp lastUpdatedTimestamp;
+	/**
+	 * Field addressLine1.
+	 */
+	private String addressLine1;
+	/**
+	 * Field addressLine2.
+	 */
+	private String addressLine2;
+	/**
+	 * Field addressLine3.
+	 */
+	private String addressLine3;
+	/**
+	 * Field addressLine4.
+	 */
+	private String addressLine4;
+	/**
+	 * Field addressLine5.
+	 */
+	private String addressLine5;
+	/**
+	 * Field cityName.
+	 */
+	private String cityName;
+	/**
+	 * Field stateCode.
+	 */
+	private String stateCode;
+	/**
+	 * Field postalCode.
+	 */
+	private String postalCode;
+	/**
+	 * Field countryCode.
+	 */
+	private String countryCode;
+	/**
+	 * Field latitude.
+	 */
+	private String latitude;
+	/**
+	 * Field longitude.
+	 */
+	private String longitude;
+	/**
+	 * Field locationTypCd.
+	 */
+	private Short locationTypCd;
+	/**
+	 * Field locationName.
+	 */
+	private String locationName;
+	/**
+	 * Field activeFlg.
+	 */
+	private String activeFlg;
+	/**
+	 * Field locNbr.
+	 */
+	private String locNbr;
+	/**
+	 * Field errorString.
+	 */
+	private String errorString;
+	/**
+	 * Field rowNumber.
+	 */
+	private int rowNumber;
+
+	/**
+	 * Field error.
+	 */
+	private String error;
+
+	/**
+	 * Field sourceSystemCd.
+	 */
+	private short sourceSystemCd;
+
+	/*
+	 * Field countryName.
+	 */
+	private String countryName;
+	
+	
+	
+	public Short getLocationTypCd() {
+		return locationTypCd;
+	}
+
+	public void setLocationTypCd(Short locationTypCd) {
+		this.locationTypCd = locationTypCd;
+	}
+
+	public String getLocNbr() {
+		return locNbr;
+	}
+
+	public void setLocNbr(String locNbr) {
+		this.locNbr = locNbr;
+	}
+
+	public String getCountryName() {
+		return countryName;
+	}
+
+	public void setCountryName(String countryName) {
+		this.countryName = countryName;
+	}
+
+	public Timestamp getCreateTimeStamp() {
+		return createTimeStamp;
+	}
+
+	/**
+	 * Method getErrorString.
+	 * 
+	 * @return String
+	 */
+	public String getErrorString() {
+		return errorString;
+	}
+
+	/**
+	 * Method setErrorString.
+	 * 
+	 * @param errorString
+	 *            String
+	 */
+	public void setErrorString(String errorString) {
+		this.errorString = errorString;
+	}
+
+	/**
+	 * Method getRowNumber.
+	 * 
+	 * @return int
+	 */
+	public int getRowNumber() {
+		return rowNumber;
+	}
+
+	/**
+	 * Method setRowNumber.
+	 * 
+	 * @param rowNumber
+	 *            int
+	 */
+	public void setRowNumber(int rowNumber) {
+		this.rowNumber = rowNumber;
+	}
+
+	/**
+	 * Method setLocationId.
+	 * 
+	 * @param locationId
+	 *            int
+	 */
+	public void setLocationId(int locationId) {
+
+		this.locationId = locationId;
+	}
+
+	/**
+	 * Method getLocationId.
+	 * 
+	 * @return int
+	 */
+	public int getLocationId() {
+
+		return locationId;
+	}
+
+	/**
+	 * Method setCreateUserId.
+	 * 
+	 * @param userId
+	 *            String
+	 */
+	public void setCreateUserId(String userId) {
+
+		this.createUserId = userId;
+	}
+
+	/**
+	 * Method getCreateUserId.
+	 * 
+	 * @return String
+	 */
+	public String getCreateUserId() {
+
+		return createUserId;
+	}
+
+	/**
+	 * Method setCreateTimeStamp.
+	 * 
+	 * @param createTimestamp
+	 *            Timestamp
+	 */
+	public void setCreateTimeStamp(Timestamp createTimestamp) {
+
+		this.createTimeStamp = createTimestamp;
+	}
+
+	/**
+	 * Method getCreateTimestamp.
+	 * 
+	 * @return Timestamp
+	 */
+	public Timestamp getCreateTimestamp() {
+
+		return createTimeStamp;
+	}
+
+	/**
+	 * Method setLastUpdatedUserId.
+	 * 
+	 * @param lastUpdatedUserId
+	 *            String
+	 */
+	public void setLastUpdatedUserId(String lastUpdatedUserId) {
+
+		this.lastUpdatedUserId = lastUpdatedUserId;
+	}
+
+	/**
+	 * Method getLastUpdatedUserId.
+	 * 
+	 * @return String
+	 */
+	public String getLastUpdatedUserId() {
+
+		return lastUpdatedUserId;
+	}
+
+	/**
+	 * Method setLastUpdatedTimestamp.
+	 * 
+	 * @param updatedTimestamp
+	 *            Timestamp
+	 */
+	public void setLastUpdatedTimestamp(Timestamp updatedTimestamp) {
+
+		this.lastUpdatedTimestamp = updatedTimestamp;
+	}
+
+	/**
+	 * Method getLastUpdatedTimestamp.
+	 * 
+	 * @return Timestamp
+	 */
+	public Timestamp getLastUpdatedTimestamp() {
+
+		return lastUpdatedTimestamp;
+	}
+
+	/**
+	 * Method setAddressLine1.
+	 * 
+	 * @param firstline
+	 *            String
+	 */
+	public void setAddressLine1(String firstline) {
+
+		this.addressLine1 = firstline;
+	}
+
+	/**
+	 * Method getAddressLine1.
+	 * 
+	 * @return String
+	 */
+	public String getAddressLine1() {
+
+		return addressLine1;
+	}
+
+	/**
+	 * Method setAddressLine2.
+	 * 
+	 * @param secondLine
+	 *            String
+	 */
+	public void setAddressLine2(String secondLine) {
+
+		this.addressLine2 = secondLine;
+	}
+
+	/**
+	 * Method getAddressLine2.
+	 * 
+	 * @return String
+	 */
+	public String getAddressLine2() {
+
+		return addressLine2;
+	}
+
+	/**
+	 * Method setAddressLine3.
+	 * 
+	 * @param thirdLine
+	 *            String
+	 */
+	public void setAddressLine3(String thirdLine) {
+
+		this.addressLine3 = thirdLine;
+	}
+
+	/**
+	 * Method getAddressLine3.
+	 * 
+	 * @return String
+	 */
+	public String getAddressLine3() {
+
+		return addressLine3;
+	}
+
+	/**
+	 * Method setAddressLine4.
+	 * 
+	 * @param fourthLine
+	 *            String
+	 */
+	public void setAddressLine4(String fourthLine) {
+
+		this.addressLine4 = fourthLine;
+	}
+
+	/**
+	 * Method getAddressLine4.
+	 * 
+	 * @return String
+	 */
+	public String getAddressLine4() {
+
+		return addressLine4;
+	}
+
+	/**
+	 * Method setAddressLine5.
+	 * 
+	 * @param fifthLine
+	 *            String
+	 */
+	public void setAddressLine5(String fifthLine) {
+
+		this.addressLine5 = fifthLine;
+	}
+
+	/**
+	 * Method getAddressLine5.
+	 * 
+	 * @return String
+	 */
+	public String getAddressLine5() {
+
+		return addressLine5;
+	}
+
+	/**
+	 * Method setCityName.
+	 * 
+	 * @param cityName
+	 *            String
+	 */
+	public void setCityName(String cityName) {
+
+		this.cityName = cityName;
+	}
+
+	/**
+	 * Method getCityName.
+	 * 
+	 * @return String
+	 */
+	public String getCityName() {
+
+		return cityName;
+	}
+
+	/**
+	 * Method setStateCode.
+	 * 
+	 * @param stateCode
+	 *            String
+	 */
+	public void setStateCode(String stateCode) {
+
+		this.stateCode = stateCode;
+	}
+
+	/**
+	 * Method getStateCode.
+	 * 
+	 * @return String
+	 */
+	public String getStateCode() {
+
+		return stateCode;
+	}
+
+	/**
+	 * Method setPostalCode.
+	 * 
+	 * @param string
+	 *            String
+	 */
+	public void setPostalCode(String string) {
+
+		this.postalCode = string;
+	}
+
+	/**
+	 * Method getPostalCode.
+	 * 
+	 * @return String
+	 */
+	public String getPostalCode() {
+
+		return postalCode;
+	}
+
+	/**
+	 * Method setCountryCode.
+	 * 
+	 * @param countryCode
+	 *            String
+	 */
+	public void setCountryCode(String countryCode) {
+
+		this.countryCode = countryCode;
+	}
+
+	/**
+	 * Method getCountryCode.
+	 * 
+	 * @return String
+	 */
+	public String getCountryCode() {
+
+		return countryCode;
+	}
+
+	/**
+	 * Method setLatitude.
+	 * 
+	 * @param latitude
+	 *            String
+	 */
+	public void setLatitude(String latitude) {
+
+		this.latitude = latitude;
+	}
+
+	/**
+	 * Method getLatitude.
+	 * 
+	 * @return String
+	 */
+	public String getLatitude() {
+
+		return latitude;
+	}
+
+	/**
+	 * Method setLongitude.
+	 * 
+	 * @param longitude
+	 *            String
+	 */
+	public void setLongitude(String longitude) {
+
+		this.longitude = longitude;
+	}
+
+	/**
+	 * Method getLongitude.
+	 * 
+	 * @return String
+	 */
+	public String getLongitude() {
+
+		return longitude;
+	}
+
+	/**
+	 * Method setLocationTypeCd.
+	 * 
+	 * @param locTypeCd
+	 *            Short
+	 */
+	public void setLocationTypeCd(Short locTypeCd) {
+
+		this.locationTypCd = locTypeCd;
+	}
+
+	/**
+	 * Method getLocationTypeCd.
+	 * 
+	 * @return Short
+	 */
+	public Short getLocationTypeCd() {
+
+		return locationTypCd;
+	}
+
+	/**
+	 * Method setLocationName.
+	 * 
+	 * @param locationName
+	 *            String
+	 */
+	public void setLocationName(String locationName) {
+
+		this.locationName = locationName;
+	}
+
+	/**
+	 * Method getLocationName.
+	 * 
+	 * @return String
+	 */
+	public String getLocationName() {
+
+		return locationName;
+	}
+
+	/**
+	 * Method setActiveFlg.
+	 * 
+	 * @param flg
+	 *            String
+	 */
+	public void setActiveFlg(String flg) {
+
+		this.activeFlg = flg;
+	}
+
+	/**
+	 * Method getActiveFlg.
+	 * 
+	 * @return String
+	 */
+	public String getActiveFlg() {
+		return activeFlg;
+	}
+
+	/**
+	 * Method setSourceLocationNbr.
+	 * 
+	 * @param sourceLocNbr
+	 *            String
+	 */
+	public void setSourceLocationNbr(String sourceLocNbr) {
+		this.locNbr = sourceLocNbr;
+	}
+
+	/**
+	 * Method getSourceLocationNbr.
+	 * 
+	 * @return String
+	 */
+	public String getSourceLocationNbr() {
+		return locNbr;
+	}
+
+	/**
+	 * Method getError.
+	 * 
+	 * @return String
+	 */
+	public String getError() {
+		return error;
+	}
+
+	/**
+	 * Method setError.
+	 * 
+	 * @param error
+	 *            String
+	 */
+	public void setError(String error) {
+		this.error = error;
+	}
+
+	/**
+	 * Method setSourceSystemCd.
+	 * 
+	 * @param sourceSystemCd
+	 *            short
+	 */
+	public void setSourceSystemCd(short sourceSystemCd) {
+		this.sourceSystemCd = sourceSystemCd;
+
+	}
+
+	/**
+	 * Method getSourceSystemCd.
+	 * 
+	 * @return short
+	 */
+	public short getSourceSystemCd() {
+
+		return sourceSystemCd;
+	}
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result
+				+ ((activeFlg == null) ? 0 : activeFlg.hashCode());
+		result = prime * result
+				+ ((addressLine1 == null) ? 0 : addressLine1.hashCode());
+		result = prime * result
+				+ ((addressLine2 == null) ? 0 : addressLine2.hashCode());
+		result = prime * result
+				+ ((addressLine3 == null) ? 0 : addressLine3.hashCode());
+		result = prime * result
+				+ ((addressLine4 == null) ? 0 : addressLine4.hashCode());
+		result = prime * result
+				+ ((addressLine5 == null) ? 0 : addressLine5.hashCode());
+		result = prime * result
+				+ ((cityName == null) ? 0 : cityName.hashCode());
+		result = prime * result
+				+ ((countryCode == null) ? 0 : countryCode.hashCode());
+		result = prime * result
+				+ ((countryName == null) ? 0 : countryName.hashCode());
+		result = prime * result
+				+ ((createTimeStamp == null) ? 0 : createTimeStamp.hashCode());
+		result = prime * result
+				+ ((createUserId == null) ? 0 : createUserId.hashCode());
+		result = prime * result + ((error == null) ? 0 : error.hashCode());
+		result = prime * result
+				+ ((errorString == null) ? 0 : errorString.hashCode());
+		result = prime
+				* result
+				+ ((lastUpdatedTimestamp == null) ? 0 : lastUpdatedTimestamp
+						.hashCode());
+		result = prime
+				* result
+				+ ((lastUpdatedUserId == null) ? 0 : lastUpdatedUserId
+						.hashCode());
+		result = prime * result
+				+ ((latitude == null) ? 0 : latitude.hashCode());
+		result = prime * result + ((locNbr == null) ? 0 : locNbr.hashCode());
+		result = prime * result + locationId;
+		result = prime * result
+				+ ((locationName == null) ? 0 : locationName.hashCode());
+		result = prime * result
+				+ ((locationTypCd == null) ? 0 : locationTypCd.hashCode());
+		result = prime * result
+				+ ((longitude == null) ? 0 : longitude.hashCode());
+		result = prime * result
+				+ ((postalCode == null) ? 0 : postalCode.hashCode());
+		result = prime * result + rowNumber;
+		result = prime * result + sourceSystemCd;
+		result = prime * result
+				+ ((stateCode == null) ? 0 : stateCode.hashCode());
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		LocationTO other = (LocationTO) obj;
+		if (activeFlg == null) {
+			if (other.activeFlg != null)
+				return false;
+		} else if (!activeFlg.equals(other.activeFlg))
+			return false;
+		if (addressLine1 == null) {
+			if (other.addressLine1 != null)
+				return false;
+		} else if (!addressLine1.equals(other.addressLine1))
+			return false;
+		if (addressLine2 == null) {
+			if (other.addressLine2 != null)
+				return false;
+		} else if (!addressLine2.equals(other.addressLine2))
+			return false;
+		if (addressLine3 == null) {
+			if (other.addressLine3 != null)
+				return false;
+		} else if (!addressLine3.equals(other.addressLine3))
+			return false;
+		if (addressLine4 == null) {
+			if (other.addressLine4 != null)
+				return false;
+		} else if (!addressLine4.equals(other.addressLine4))
+			return false;
+		if (addressLine5 == null) {
+			if (other.addressLine5 != null)
+				return false;
+		} else if (!addressLine5.equals(other.addressLine5))
+			return false;
+		if (cityName == null) {
+			if (other.cityName != null)
+				return false;
+		} else if (!cityName.equals(other.cityName))
+			return false;
+		if (countryCode == null) {
+			if (other.countryCode != null)
+				return false;
+		} else if (!countryCode.equals(other.countryCode))
+			return false;
+		if (countryName == null) {
+			if (other.countryName != null)
+				return false;
+		} else if (!countryName.equals(other.countryName))
+			return false;
+		if (createTimeStamp == null) {
+			if (other.createTimeStamp != null)
+				return false;
+		} else if (!createTimeStamp.equals(other.createTimeStamp))
+			return false;
+		if (createUserId == null) {
+			if (other.createUserId != null)
+				return false;
+		} else if (!createUserId.equals(other.createUserId))
+			return false;
+		if (error == null) {
+			if (other.error != null)
+				return false;
+		} else if (!error.equals(other.error))
+			return false;
+		if (errorString == null) {
+			if (other.errorString != null)
+				return false;
+		} else if (!errorString.equals(other.errorString))
+			return false;
+		if (lastUpdatedTimestamp == null) {
+			if (other.lastUpdatedTimestamp != null)
+				return false;
+		} else if (!lastUpdatedTimestamp.equals(other.lastUpdatedTimestamp))
+			return false;
+		if (lastUpdatedUserId == null) {
+			if (other.lastUpdatedUserId != null)
+				return false;
+		} else if (!lastUpdatedUserId.equals(other.lastUpdatedUserId))
+			return false;
+		if (latitude == null) {
+			if (other.latitude != null)
+				return false;
+		} else if (!latitude.equals(other.latitude))
+			return false;
+		if (locNbr == null) {
+			if (other.locNbr != null)
+				return false;
+		} else if (!locNbr.equals(other.locNbr))
+			return false;
+		if (locationId != other.locationId)
+			return false;
+		if (locationName == null) {
+			if (other.locationName != null)
+				return false;
+		} else if (!locationName.equals(other.locationName))
+			return false;
+		if (locationTypCd == null) {
+			if (other.locationTypCd != null)
+				return false;
+		} else if (!locationTypCd.equals(other.locationTypCd))
+			return false;
+		if (longitude == null) {
+			if (other.longitude != null)
+				return false;
+		} else if (!longitude.equals(other.longitude))
+			return false;
+		if (postalCode == null) {
+			if (other.postalCode != null)
+				return false;
+		} else if (!postalCode.equals(other.postalCode))
+			return false;
+		if (rowNumber != other.rowNumber)
+			return false;
+		if (sourceSystemCd != other.sourceSystemCd)
+			return false;
+		if (stateCode == null) {
+			if (other.stateCode != null)
+				return false;
+		} else if (!stateCode.equals(other.stateCode))
+			return false;
+		return true;
+	}
+
+	@Override
+	public String toString() {
+		return "LocationTO [locationId=" + locationId + ", createUserId="
+				+ createUserId + ", createTimeStamp=" + createTimeStamp
+				+ ", lastUpdatedUserId=" + lastUpdatedUserId
+				+ ", lastUpdatedTimestamp=" + lastUpdatedTimestamp
+				+ ", addressLine1=" + addressLine1 + ", addressLine2="
+				+ addressLine2 + ", addressLine3=" + addressLine3
+				+ ", addressLine4=" + addressLine4 + ", addressLine5="
+				+ addressLine5 + ", cityName=" + cityName + ", stateCode="
+				+ stateCode + ", postalCode=" + postalCode + ", countryCode="
+				+ countryCode + ", latitude=" + latitude + ", longitude="
+				+ longitude + ", locationTypCd=" + locationTypCd
+				+ ", locationName=" + locationName + ", activeFlg=" + activeFlg
+				+ ", locNbr=" + locNbr + ", errorString=" + errorString
+				+ ", rowNumber=" + rowNumber + ", error=" + error
+				+ ", sourceSystemCd=" + sourceSystemCd + ", countryName="
+				+ countryName + "]";
+	}
+
+}

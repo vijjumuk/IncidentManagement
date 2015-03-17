@@ -1,0 +1,16 @@
+describe('Search Controller: search tests:: ', function () {
+
+    var controller;
+
+    beforeEach(angular.mock.module('efs.search'));
+
+    beforeEach(angular.mock.inject(function ($controller) {
+        controller = $controller('searchCtrl');
+    }));
+
+    it('Search controller exists', function () {
+        expect(controller).toBeDefined();
+    });
+
+
+});

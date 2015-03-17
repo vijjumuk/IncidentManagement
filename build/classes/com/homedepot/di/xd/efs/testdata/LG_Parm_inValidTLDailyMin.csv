@@ -1,0 +1,2 @@
+Location Number,Destination,Load Group Name,Max Truck Height,TL Cube Threshold,TL Weight Threshold,Directional Rounding Threshold,Threshold Increment,Full TL Threshold,Load Configurator,Smoothing Interval,TL Daily Min Qty,TL Daily Max Qty,Effective Begin,Effective End
+42978IL001,5023,default,9,1000,1000,0.1,0.6,0.89,Y,10,200,4,6/14/2014,12/31/9999

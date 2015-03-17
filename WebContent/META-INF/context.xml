@@ -1,0 +1,63 @@
+<?xml version="1.0"
+?>
+<Context allowLinking="true">
+	<!--This context.xml file for /opt/hd/tomcat/hdapps/taaaCadeIsAwesome/resources/context.xml/ was generated on: 2014-08-21 22:33:37.522587-->
+	<!--start TA.AA.DAO-ADMIN.001-->
+	<Resource auth="Container"
+    defaultTransactionIsolation="1"
+    driverClassName="com.ibm.db2.jcc.DB2Driver"
+    factory="com.homedepot.ta.aa.db.crypto.EncryptedDataSourceFactory"
+    logAbandoned="true"
+    maxActive="10"
+    maxIdle="3"
+    maxOpenPreparedStatements="1000"
+    maxWait="30000"
+    name="jdbc/TA.AA.DAO-ADMIN.001"
+    password="tf8K8wCtA2k="
+    poolPreparedStatements="true"
+    removeAbandoned="true"
+    removeAbandonedTimeout="60"
+    type="javax.sql.DataSource"
+    url="jdbc:db2://ibdynpx0.sysplex.homedepot.com:5122/NP1"
+    username="st3tb01"
+    validationQuery="SELECT COUNT(*) FROM SYSIBM.SYSDUMMY1 WHERE 1=0 WITH UR"/>
+    
+	<!--start TA.AA.GRID-APPL-PLC-ADMIN.001-->
+	<Resource auth="Container"
+    defaultTransactionIsolation="1"
+    driverClassName="com.ibm.db2.jcc.DB2Driver"
+    factory="com.homedepot.ta.aa.db.crypto.EncryptedDataSourceFactory"
+    logAbandoned="true"
+    maxActive="10"
+    maxIdle="3"
+    maxOpenPreparedStatements="1000"
+    maxWait="30000"
+    name="jdbc/TA.AA.GRID-APPL-PLC-ADMIN.001"
+    password="DtlNpr7Bj8w="
+    poolPreparedStatements="true"
+    removeAbandoned="true"
+    removeAbandonedTimeout="60"
+    type="javax.sql.DataSource"
+    url="jdbc:db2://ibdynpx0.sysplex.homedepot.com:5122/NP1"
+    username="ST2TB01"
+    validationQuery="SELECT COUNT(*) FROM SYSIBM.SYSDUMMY1 WHERE 1=0 WITH UR"/>
+
+    <Resource auth="Container"
+                    connectionProperties="v$session.program=dixdSCMSyncCollaboration;"
+                    driverClassName="oracle.jdbc.driver.OracleDriver"
+                    factory="com.homedepot.ta.aa.db.crypto.EncryptedDataSourceFactory"
+                    logAbandoned="true"
+                    maxActive="10"
+                    maxIdle="3"
+                    maxWait="30000"
+                    name="jdbc/SupplyChainDistributionNetwork.1"
+                    password="DwqCv3uz+0+ACov8uoTe0g=="
+                    removeAbandoned="true"
+                    removeAbandonedTimeout="60"
+                    type="javax.sql.DataSource"
+                    url="jdbc:oracle:thin:@//pnpmm77z.homedepot.com:1521/dqa19ss"
+                    username="SCSYAP04"
+                    validationQuery="select count(*) from dual"/>
+ 
+
+</Context>

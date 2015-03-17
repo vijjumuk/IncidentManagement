@@ -1,0 +1,43 @@
+(function() {
+    'use strict';
+
+    angular
+        .module('efs.route') 
+        .run(appRun);
+
+    appRun.$inject = ['routerHelper'];
+    /* @ngInject */
+    function appRun(routerHelper) {
+        routerHelper.configureStates(getStates());
+    }
+
+    function getStates() {
+        return [
+            {
+                state: 'route',
+                config: {
+                    url: '/route',
+                    templateUrl: 'route/route.html',
+                    title: 'route',
+                    settings: {
+                        nav: 1,
+                        content: '<i class="fa fa-dashboard"></i> Route'
+                    }
+                }
+            },
+            {
+                state: 'route.create',
+                config: {  
+                    parent: 'route',
+                    url: '/create',
+                    templateUrl: 'route/create.route.html',
+                    title: 'routeCreate',
+                    settings: {
+                        nav: 2,
+                        content: '<i class="fa fa-dashboard"></i> Create Route'
+                    }
+                }
+            }
+        ];
+    }
+})();

@@ -1,0 +1,16 @@
+.map-container {
+	background:#ccc;
+	width:100%;
+}
+
+.map-container .awesome-marker {
+	background:none;
+}
+
+.map-container .awesome-marker i {
+	margin-top:35px;
+}
+
+.map-container .leaflet-top, .leaflet-bottom {
+	z-index: 999;
+}

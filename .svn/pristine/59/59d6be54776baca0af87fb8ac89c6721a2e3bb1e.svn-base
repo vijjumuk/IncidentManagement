@@ -1,0 +1,15 @@
+<div class="search-container" ng-controller="searchCtrl as vmSearch">
+	<form name="frmSearch" id="frmSearch">
+		<div class="input-group">
+			<input type="text" class="form-control" id="txtMainSearch" placeholder="Search"
+				ng-model="vmSearch.searchQuery"
+				data-animation="am-flip-x" 
+				typeahead="location.locationName as location.locationName for location in vmSearch.getLocations($viewValue).$promise"
+				typeahead-template-url="search/main.typeahead.search.html"
+				typeahead-min-length="2"  
+				typeahead-on-select = "vmSearch.selectLocation($item, $model, $label)"/>
+
+			<div class="input-group-addon"><i class="fa fa-search"></i></div>
+		</div>
+	</form>
+</div>

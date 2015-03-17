@@ -1,0 +1,80 @@
+(function() {
+    'use strict';
+
+    angular
+        .module('efs.map')
+        .constant('BING_API_KEY', "AuyVXlj60uQ57VAG_RvyJlMFRh-IQxQmUc6IVVXo6LYCaHn-rfbdk4-tw-hv1mgi")
+        .constant('mapDefaultPosition', {lat: 39.8282, lng:  -98.5795, zoom: 4})
+        .constant('MAP_HEIGHT', "500px")
+        .controller('mapCtrl', mapCtrl);
+
+    mapCtrl.$inject = ['mapService', 'BING_API_KEY', 'mapDefaultPosition', 'MAP_HEIGHT', 'L', 'arc'];
+
+    /* @ngInject */
+    function mapCtrl(mapService, BING_API_KEY, mapDefaultPosition, MAP_HEIGHT, L, arc) {
+        /*jshint validthis: true */
+        var vmMap = this;
+
+        activate();
+
+        function activate() {
+			initializeMap();
+        }
+
+        function initializeMap () {
+        	L.AwesomeMarkers.Icon.prototype.options.prefix = 'fa';
+        	angular.extend(vmMap, {
+                height: MAP_HEIGHT,
+                center: mapDefaultPosition,
+                markers: mapService.getMarkers(),
+                paths: mapService.getRoutes(),
+                layers: {
+                    baselayers: {
+                    	bingRoad: {
+                            name: 'Bing Road',
+                            type: 'bing',
+                            key: BING_API_KEY,
+                            layerOptions: {
+                                type: 'Road'
+                            }
+                        },
+                        bingAerial: {
+                            name: 'Bing Aerial',
+                            type: 'bing',
+                            key: BING_API_KEY,
+                            layerOptions: {
+                                type: 'Aerial'
+                            }
+                        },
+                        bingAerialWithLabels: {
+                            name: 'Bing Aerial With Labels',
+                            type: 'bing',
+                            key: BING_API_KEY,
+                            layerOptions: {
+                                type: 'AerialWithLabels'
+                            }
+                        },
+                    }
+                }
+            });
+        }
+
+        function addMarker () {
+        	mapService.addMarker({ATLANTA :{
+                lat: 33.7550,
+                lng: -84.3900,
+                message: "Atlanta",
+                icon: {
+                    type: 'awesomeMarker',
+                    icon: 'circle',
+                    markerColor: 'green',
+                    iconColor: '#00ae40'
+                }
+            }}, true);
+        }
+
+        function addRoute () {
+            mapService.addRoute(vmMap.markers.ATLANTA, vmMap.markers.HOUSTON);
+        }
+    }
+})();

@@ -1,0 +1,3 @@
+<div class="map-container fadeIn " ng-controller="mapCtrl as vmMap">
+	<leaflet id="mymap" layers="vmMap.layers" defaults="vmMap.defaults" center="vmMap.center" height="{{vmMap.height}}" markers="vmMap.markers" geoJSON="vmMap.paths"></leaflet>
+</div>

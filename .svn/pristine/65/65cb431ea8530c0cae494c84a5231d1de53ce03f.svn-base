@@ -1,0 +1,33 @@
+(function() {
+    'use strict';
+
+    angular
+        .module('efs.security')
+        .factory('security', security);
+
+    security.$inject = ['$rootScope', 'ngDialog', 'AUTH_EVENTS'];
+    
+    /* @ngInject */
+    function security($rootScope, ngDialog, AUTH_EVENTS) {
+        var service = {
+            isAuthenticated: isAuthenticated,
+            initialize: initialize
+        };
+        return service;
+
+        function initialize () {
+          //Register some event handlers that will trigger our login popup
+          $rootScope.$on(AUTH_EVENTS.notAuthenticated, showLoginDialog);
+          $rootScope.$on(AUTH_EVENTS.sessionTimeout, showLoginDialog);
+        }
+
+        function isAuthenticated() {
+        	//TODO Test for auth cookie. For now just assume we are logged in
+        	return true;
+        }
+
+        function showLoginDialog () {
+        	ngDialog.open({template: 'core/security/security.html'});
+        }
+    }
+})();

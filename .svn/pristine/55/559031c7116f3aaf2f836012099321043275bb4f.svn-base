@@ -1,0 +1,426 @@
+package com.homedepot.di.xd.efs.to;
+
+import java.io.Serializable;
+import java.util.List;
+
+/**
+ * This class is used for Load Group
+ */
+public class LoadGroupParamTO implements Serializable {
+
+	/**
+	 * Field serialVersionUID. (value is 3739959446853627352)
+	 */
+	private static final long serialVersionUID = 3739959446853627352L;
+
+	/**
+	 * Field locationNbr.
+	 */
+	private String locationNbr;
+	/**
+	 * Field locationId.
+	 */
+	private int locationId;
+	/**
+	 * Field destinationNbr.
+	 */
+	private String destinationNbr;
+	/**
+	 * Field destinationId.
+	 */
+	private int destinationId;
+	/**
+	 * Field loadGrpName.
+	 */
+	private String loadGrpName;
+	/**
+	 * Field LoadGrpId.
+	 */
+	private int LoadGrpId;
+	/**
+	 * Field shipLaneId.
+	 */
+	private int shipLaneId;
+	/**
+	 * Field loadParamList.
+	 */
+	private List<ParameterTO> loadParamList;
+	/**
+	 * Field rowNumber.
+	 */
+	private int rowNumber;
+	/**
+	 * Field effectiveBeginDate.
+	 */
+	private String effectiveBeginDate;
+	/**
+	 * Field effectiveEndDate.
+	 */
+	private String effectiveEndDate;
+
+	/**
+	 * Field isUpdate
+	 */
+	private boolean isUpdate;
+
+	/**
+	 * Method isUpdate.
+	 * 
+	 * @return
+	 */
+	public boolean isUpdate() {
+		return isUpdate;
+	}
+
+	/**
+	 * Method setUpdate.
+	 * 
+	 * @param isUpdate
+	 */
+	public void setUpdate(boolean isUpdate) {
+		this.isUpdate = isUpdate;
+	}
+
+	/**
+	 * Method getEffectiveBeginDate.
+	 * 
+	 * @return String
+	 */
+	public String getEffectiveBeginDate() {
+		return effectiveBeginDate;
+	}
+
+	/**
+	 * Method setEffectiveBeginDate.
+	 * 
+	 * @param effectiveBeginDate
+	 *            String
+	 */
+	public void setEffectiveBeginDate(String effectiveBeginDate) {
+		this.effectiveBeginDate = effectiveBeginDate;
+	}
+
+	/**
+	 * Method getEffectiveEndDate.
+	 * 
+	 * @return String
+	 */
+	public String getEffectiveEndDate() {
+		return effectiveEndDate;
+	}
+
+	/**
+	 * Method setEffectiveEndDate.
+	 * 
+	 * @param effectiveEndDate
+	 *            String
+	 */
+	public void setEffectiveEndDate(String effectiveEndDate) {
+		this.effectiveEndDate = effectiveEndDate;
+	}
+
+	/**
+	 * Method getRowNumber.
+	 * 
+	 * @return int
+	 */
+	public int getRowNumber() {
+		return rowNumber;
+	}
+
+	/**
+	 * Method setRowNumber.
+	 * 
+	 * @param rowNumber
+	 *            int
+	 */
+	public void setRowNumber(int rowNumber) {
+		this.rowNumber = rowNumber;
+	}
+
+	/**
+	 * Method setLocationNbr.
+	 * 
+	 * @param locNbr
+	 *            String
+	 */
+	public void setLocationNbr(String locNbr) {
+
+		this.locationNbr = locNbr;
+
+	}
+
+	/**
+	 * Method getLocationNbr.
+	 * 
+	 * @return String
+	 */
+	public String getLocationNbr() {
+
+		return locationNbr;
+	}
+
+	/**
+	 * Method setLocationId.
+	 * 
+	 * @param locId
+	 *            int
+	 */
+	public void setLocationId(int locId) {
+
+		this.locationId = locId;
+
+	}
+
+	/**
+	 * Method getLocationId.
+	 * 
+	 * @return int
+	 */
+	public int getLocationId() {
+
+		return locationId;
+	}
+
+	/**
+	 * Method setDestinationNbr.
+	 * 
+	 * @param destNbr
+	 *            String
+	 */
+	public void setDestinationNbr(String destNbr) {
+
+		this.destinationNbr = destNbr;
+
+	}
+
+	/**
+	 * Method getDestinationNbr.
+	 * 
+	 * @return String
+	 */
+	public String getDestinationNbr() {
+
+		return destinationNbr;
+	}
+
+	/**
+	 * Method setDestinationId.
+	 * 
+	 * @param destId
+	 *            int
+	 */
+	public void setDestinationId(int destId) {
+
+		this.destinationId = destId;
+
+	}
+
+	/**
+	 * Method getDestinationId.
+	 * 
+	 * @return int
+	 */
+	public int getDestinationId() {
+
+		return destinationId;
+	}
+
+	/**
+	 * Method setLoadGrpName.
+	 * 
+	 * @param loadGrpname
+	 *            String
+	 */
+	public void setLoadGrpName(String loadGrpname) {
+
+		this.loadGrpName = loadGrpname;
+	}
+
+	/**
+	 * Method getLoadGrpName.
+	 * 
+	 * @return String
+	 */
+	public String getLoadGrpName() {
+
+		return loadGrpName;
+	}
+
+	/**
+	 * Method setLoadGrpId.
+	 * 
+	 * @param loadGrpId
+	 *            int
+	 */
+	public void setLoadGrpId(int loadGrpId) {
+
+		this.LoadGrpId = loadGrpId;
+
+	}
+
+	/**
+	 * Method getLoadGrpId.
+	 * 
+	 * @return int
+	 */
+	public int getLoadGrpId() {
+
+		return LoadGrpId;
+	}
+
+	/**
+	 * Method setShippingLaneId.
+	 * 
+	 * @param shipLaneId
+	 *            int
+	 */
+	public void setShippingLaneId(int shipLaneId) {
+
+		this.shipLaneId = shipLaneId;
+	}
+
+	/**
+	 * Method getShippingLaneId.
+	 * 
+	 * @return int
+	 */
+	public int getShippingLaneId() {
+
+		return shipLaneId;
+	}
+
+	/**
+	 * Method setLoadParamList.
+	 * 
+	 * @param paramCdLiat
+	 *            List<LaneLoadGroupParamTO>
+	 */
+	public void setLoadParamList(List<ParameterTO> paramCdLiat) {
+
+		this.loadParamList = paramCdLiat;
+
+	}
+
+	/**
+	 * Method getLoadParamList.
+	 * 
+	 * @return List<LaneLoadGroupParamTO>
+	 */
+	public List<ParameterTO> getLoadParamList() {
+
+		return loadParamList;
+	}
+
+	/**
+	 * Method hashCode.
+	 * 
+	 * @return int
+	 */
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + LoadGrpId;
+		result = prime * result + destinationId;
+		result = prime * result
+				+ ((destinationNbr == null) ? 0 : destinationNbr.hashCode());
+		result = prime
+				* result
+				+ ((effectiveBeginDate == null) ? 0 : effectiveBeginDate
+						.hashCode());
+		result = prime
+				* result
+				+ ((effectiveEndDate == null) ? 0 : effectiveEndDate.hashCode());
+		result = prime * result + (isUpdate ? 1231 : 1237);
+		result = prime * result
+				+ ((loadGrpName == null) ? 0 : loadGrpName.hashCode());
+		result = prime * result
+				+ ((loadParamList == null) ? 0 : loadParamList.hashCode());
+		result = prime * result + locationId;
+		result = prime * result
+				+ ((locationNbr == null) ? 0 : locationNbr.hashCode());
+		result = prime * result + rowNumber;
+		result = prime * result + shipLaneId;
+		return result;
+	}
+
+	/**
+	 * Method equals.
+	 * 
+	 * @param obj
+	 *            Object
+	 * @return boolean
+	 */
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		LoadGroupParamTO other = (LoadGroupParamTO) obj;
+		if (LoadGrpId != other.LoadGrpId)
+			return false;
+		if (destinationId != other.destinationId)
+			return false;
+		if (destinationNbr == null) {
+			if (other.destinationNbr != null)
+				return false;
+		} else if (!destinationNbr.equals(other.destinationNbr))
+			return false;
+		if (effectiveBeginDate == null) {
+			if (other.effectiveBeginDate != null)
+				return false;
+		} else if (!effectiveBeginDate.equals(other.effectiveBeginDate))
+			return false;
+		if (effectiveEndDate == null) {
+			if (other.effectiveEndDate != null)
+				return false;
+		} else if (!effectiveEndDate.equals(other.effectiveEndDate))
+			return false;
+		if (isUpdate != other.isUpdate)
+			return false;
+		if (loadGrpName == null) {
+			if (other.loadGrpName != null)
+				return false;
+		} else if (!loadGrpName.equals(other.loadGrpName))
+			return false;
+		if (loadParamList == null) {
+			if (other.loadParamList != null)
+				return false;
+		} else if (!loadParamList.equals(other.loadParamList))
+			return false;
+		if (locationId != other.locationId)
+			return false;
+		if (locationNbr == null) {
+			if (other.locationNbr != null)
+				return false;
+		} else if (!locationNbr.equals(other.locationNbr))
+			return false;
+		if (rowNumber != other.rowNumber)
+			return false;
+		if (shipLaneId != other.shipLaneId)
+			return false;
+		return true;
+	}
+
+	/**
+	 * Method toString.
+	 * 
+	 * @return String
+	 */
+	@Override
+	public String toString() {
+		return "LoadGroupParamTO [locationNbr=" + locationNbr + ", locationId="
+				+ locationId + ", destinationNbr=" + destinationNbr
+				+ ", destinationId=" + destinationId + ", loadGrpName="
+				+ loadGrpName + ", LoadGrpId=" + LoadGrpId + ", shipLaneId="
+				+ shipLaneId + ", loadParamList=" + loadParamList
+				+ ", rowNumber=" + rowNumber + ", effectiveBeginDate="
+				+ effectiveBeginDate + ", effectiveEndDate=" + effectiveEndDate
+				+ ", isUpdate=" + isUpdate + "]";
+	}
+
+}

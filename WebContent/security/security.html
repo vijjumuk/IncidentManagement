@@ -1,0 +1,16 @@
+<div id="nav_user" class="white_content" style="display: block;">
+    <div id="dialog1" class="window">
+        <p id="loginParagraph">Please login to authenticate yourself.</p>
+        <form name="login-form">
+            <div ng-controller="LoginController as login" class="form-group">
+
+                <input type="text" class="form-control" name="j_username" placeholder="Enter User ID" id="usernameId" ng-model="credentials.username" maxlength="20" size="10"><br>
+                <input type="password" class="form-control" name="j_password" placeholder="Enter Password"  ng-model="credentials.password" id="passwordId" maxlength="20" size="10">
+                <br>
+                <div   class="btn btn-primary scsmt-button" name="action" ng-click="login.validate()">Login</div>
+
+                <button class="btn btn-default" onclick="hideLoginDialog(event);" id="cancelLogin">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

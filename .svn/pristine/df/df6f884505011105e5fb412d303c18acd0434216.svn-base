@@ -1,0 +1,8 @@
+<a>
+	<div class="typeahead-group-header" ng-if="match.model.firstInGroup">
+		<div class="typeahead-group-header-inner">
+			{{match.model.locationType}}
+		</div>
+	</div>
+	<div class="typeahead-match" bind-html-unsafe="match.model.locationName + ' (' + match.model.locNbr + ')' | typeaheadHighlight:query"></div>
+</a>

@@ -1,0 +1,25 @@
+package com.homedepot.di.xd.efs.businesshelper;
+
+import java.util.List;
+
+import com.homedepot.di.xd.efs.dao.ReportTypeDAO;
+import com.homedepot.di.xd.efs.exception.DataOperationException;
+import com.homedepot.di.xd.efs.exception.ReportTypeException;
+import com.homedepot.di.xd.efs.to.ReportTypeTO;
+
+public class ReportTypeManager{
+
+	/**
+	 * This method will get all of the Report Type codes
+	 * 
+	 * @return - list of Report Type codes.
+	 * @throws ReportTypeException
+	 */
+	public static List<ReportTypeTO> getReportTypeCodes() throws ReportTypeException{
+		try {
+			return ReportTypeDAO.getReportTypeCodes();
+		} catch (DataOperationException e) {
+			throw new ReportTypeException(e.getMessage(), e);
+		}
+	}
+}

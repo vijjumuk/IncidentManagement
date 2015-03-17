@@ -1,0 +1,67 @@
+(function() {
+    'use strict';
+
+    angular
+        .module('efs.search')
+        .factory('searchService', searchService);
+
+    searchService.$inject = ['$state', '_', 'LOCATION_TYPES', 'dataservice'];
+
+    /* @ngInject */
+    function searchService($state, _, LOCATION_TYPES, dataservice) {
+        
+        return {
+            allLocation: allLocation,
+            selectLocation: selectLocation
+        };
+
+        function selectLocation(location) {
+            //TODO check type then route to the appropriate page
+            switch (location.locationTypCd) {
+                case 13:
+                    //Route to RDC page
+                    $state.go('route.rdc',  {locationId: location.locNbr});
+                    //Should we cache this object or call a service once we get to the other page?
+                break;
+            }
+        }
+
+        function allLocation(params) {
+        	return dataservice.getLocations().query(params, function(response) {
+                return enrichSearchResults(response);
+            });
+        }
+
+        function enrichSearchResults(results) {
+        	var enrichedSearchResults = results;
+        	enrichedSearchResults = addFirstInGroupFlag(enrichedSearchResults);
+        	enrichedSearchResults = addLocationType(enrichedSearchResults);
+
+        	return enrichedSearchResults;
+        }
+
+        function addFirstInGroupFlag(results) {
+        	//We want to group our search results by location type
+        	//We also want to add a group header in the typeahead search results display
+        	//so we are adding a firstInGroup property to use in the template
+        	return _(results)
+                    .groupBy('locationTypCd')
+                    .map(function (g) {
+                      g[0].firstInGroup = true; // the first item in each group
+                      return g;
+                    })
+                    .flatten()
+                    .value();
+        }
+
+        function addLocationType(results) {
+        	return _(results)
+                    .map(function (g) {
+                      g.locationType = LOCATION_TYPES[g.locationTypCd].text;
+                      return g;
+                    })
+                    .flatten()
+                    .value();
+        }
+    }
+})();
